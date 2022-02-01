@@ -1,4 +1,8 @@
 # diplom
 
 This is my diplom project "Logstash-based IP checker"  
-Requires logstash-filter-virustotalthree and logstash-filter-public_ip modules
+Run 
+
+    $ logstash-plugin install logstash-filter-virustotalthree logstash-filter-public_ip logstash-filter-ipinfo
+
+before using this plugin

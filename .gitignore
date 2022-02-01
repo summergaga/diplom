@@ -1,6 +1,5 @@
 IP2PROXY-LITE-PX10.BIN
 vt_api_key.txt
-logstash-7.16.3
-logstash-7.15.2
+logstash-*
 apuseipdb_key.txt
 .vscode
