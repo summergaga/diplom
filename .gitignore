@@ -1,5 +1,4 @@
-IP2PROXY-LITE-PX10.BIN
-vt_api_key.txt
+*.BIN
 logstash-*
-apuseipdb_key.txt
 .*
+api-keys.txt
