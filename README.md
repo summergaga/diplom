@@ -1,13 +1,14 @@
-# diplom
+# Описание
 
-This is my diplom project "Logstash-based IP checker"  
-Run
+Это мой дипломный проект по проверке IP-адресов в различных TI-фидах на базе Logstash  
+Для запуска требуется установить `logstash-filter-virustotalthree` и `logstash-filter-public_ip` командой
 
     .\logstash-plugin install logstash-filter-virustotalthree logstash-filter-public_ip
 
-in bin directory before using this plugin
+в директории bin
 
-Execution order
+Дополнительно требуется установить [`logstash-filter-teamcymru`](https://github.com/summergaga/logstash-filter-teamcymru)
+# Структурная схема
 ```mermaid
 graph TD;
     A[stdin input] -->|Filter part| B[Grok IP parser];
