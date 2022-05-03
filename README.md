@@ -1,9 +1,9 @@
 # Описание
 
 Это мой дипломный проект по проверке IP-адресов в различных TI-фидах на базе Logstash  
-Для запуска требуется установить `logstash-filter-virustotalthree` и `logstash-filter-public_ip` командой
+Для запуска требуется установить `logstash-filter-public_ip` командой
 
-    .\logstash-plugin install logstash-filter-virustotalthree logstash-filter-public_ip
+    .\logstash-plugin install logstash-filter-public_ip
 
 в директории bin
 
