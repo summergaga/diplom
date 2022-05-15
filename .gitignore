@@ -2,7 +2,4 @@
 logstash-*
 .*
 *.txt
-*.exe
-*.doc
-*.docx
-*.pdf
+/docs

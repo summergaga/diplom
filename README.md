@@ -26,8 +26,9 @@ graph TD;
 ## Spamhaus
 Если DNS-запрос вернул 127.0.0.4 - адрес присутствует в спам-листах Spamhaus. [Коды](https://www.spamhaus.org/zen/) и их [описание](https://www.spamhaus.org/faq/section/DNSBL%20Usage#200).
 ## Рейтинг Alienvault
-Почему-то он везде 0... Но через [API](https://otx.alienvault.com/api) работает.
-
+Если возвращает 0, то IP чист, если 1 - то вредоносный.
+Работает через [API](https://otx.alienvault.com/api).
+[Ссылка на списки вредоносных IP](https://gist.github.com/bsmartt13/efa02c40ea12c09d9c3a).
 ## Проверка Virustotal
 Получаем оценку от Virustotal в интервале [-100, 100], где -100 - "абсолютно вредоносный", а 100 - "абсолютно безвредный". [Подробнее](https://support.virustotal.com/hc/en-us/articles/115002146769-Comments).
 
@@ -67,7 +68,7 @@ graph TD;
 }
 ```
 ```
-91.238.229.134 - IP from AS58042
+91.238.229.134 - IP from AS58042 (Бонч-Бруевич)
 {
     "alienvault_score" => 0,
     "abuseipdb_score" => 100,
