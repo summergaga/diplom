@@ -5,9 +5,9 @@
 
     .\logstash-plugin install logstash-filter-public_ip
 
-в директории bin
+в директории bin.
 
-Дополнительно требуется установить [`logstash-filter-teamcymru`](https://github.com/summergaga/logstash-filter-teamcymru)
+Дополнительно требуется установить [`logstash-filter-teamcymru`](https://github.com/summergaga/logstash-filter-teamcymru).
 # Структурная схема
 ```mermaid
 graph TD;
