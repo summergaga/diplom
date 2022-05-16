@@ -73,7 +73,7 @@ graph TD;
     "alienvault_score" => 0,
     "abuseipdb_score" => 100,
     "virustotal_score" => 0,
-    "teamcymru" => 17,
+    "teamcymru" => 1,
                  "ip" => "91.238.229.134"
 }
 ```
