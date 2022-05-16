@@ -68,7 +68,7 @@ graph TD;
 }
 ```
 ```
-91.238.229.134 - IP from AS58042 (Бонч-Бруевич)
+91.238.229.134 - IP from AS58042 (СПбГУТ)
 {
     "alienvault_score" => 0,
     "abuseipdb_score" => 100,
