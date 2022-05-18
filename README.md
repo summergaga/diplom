@@ -45,7 +45,7 @@ graph TD;
                   "ip" => "1.1.1.1",
      "abuseipdb_score" => 0,
     "virustotal_score" => 69,
-    "teamcymru" => 56,
+    "teamcymru_score" => 56,
     "alienvault_score" => 0,
 }
 ```
@@ -56,7 +56,7 @@ graph TD;
      "abuseipdb_score" => 0,
     "alienvault_score" => 0,
     "virustotal_score" => 0,
-    "teamcymru" => 0,
+    "teamcymru_score" => 0,
 }
 ```
 ```
@@ -73,7 +73,7 @@ graph TD;
     "alienvault_score" => 0,
     "abuseipdb_score" => 100,
     "virustotal_score" => 0,
-    "teamcymru" => 1,
+    "teamcymru_score" => 1,
                  "ip" => "91.238.229.134"
 }
 ```
