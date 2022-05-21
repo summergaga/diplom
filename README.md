@@ -45,6 +45,7 @@ graph TD;
                   "ip" => "1.1.1.1",
      "abuseipdb_score" => 0,
     "virustotal_score" => 69,
+    "spamhaus_score" => "0",
     "teamcymru_score" => 56,
     "alienvault_score" => 0,
 }
@@ -57,6 +58,7 @@ graph TD;
     "alienvault_score" => 0,
     "virustotal_score" => 0,
     "teamcymru_score" => 0,
+    "spamhaus_score" => "0",
 }
 ```
 ```
@@ -72,8 +74,20 @@ graph TD;
 {
     "alienvault_score" => 0,
     "abuseipdb_score" => 100,
+    "spamhaus_score" => "0",
     "virustotal_score" => 0,
     "teamcymru_score" => 1,
                  "ip" => "91.238.229.134"
+}
+```
+```
+203.248.175.71 - IP from AS3786 (LG DACOM Corporation)
+{
+    "virustotal_score" => -6,
+                  "ip" => "203.248.175.71",
+      "spamhaus_score" => "0",
+     "abuseipdb_score" => 100,
+     "teamcymru_score" => "100",
+    "alienvault_score" => 1
 }
 ```
