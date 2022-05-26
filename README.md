@@ -23,6 +23,8 @@ graph TD;
 ```
 
 # Механизм работы
+## Проверка версии и типа IP-адреса
+Используется плагин `logstash-filter-public_ip`
 ## Spamhaus
 Если DNS-запрос вернул 127.0.0.4 - адрес присутствует в спам-листах Spamhaus. [Коды](https://www.spamhaus.org/zen/) и их [описание](https://www.spamhaus.org/faq/section/DNSBL%20Usage#200).
 ## Рейтинг Alienvault
