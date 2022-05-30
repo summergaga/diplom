@@ -13,13 +13,14 @@
 graph TD;
     A[stdin input] -->|Filter part| B[Grok IP parser];
     B --> C{Public IP filter};
-    C --> |Not public IP| I[Output];
+    C --> |Not public IP| J[Output];
     C --> |Public IP| D[Spamhaus check];
     D --> E[Alienvault];
     E --> F[Virustotal check];
     F --> G[AbuseIPDB check];
     G --> H[TeamCymru check];
-    H --> I;
+    H --> I[Total result];
+    I --> J;
 ```
 
 # Механизм работы
@@ -40,6 +41,8 @@ graph TD;
 ## Проверка Teamcymru
 Рейтинг от 0 до 100, аналогично AbuseIPDB.
 
+## Вывод общего результата
+Простое сравнение каждого параметра с порогом.
 # Примеры вывода
 ```
 1.1.1.1 - Cloudflare DNS one.one.one.one
@@ -47,9 +50,10 @@ graph TD;
                   "ip" => "1.1.1.1",
      "abuseipdb_score" => 0,
     "virustotal_score" => 69,
-    "spamhaus_score" => "0",
+    "spamhaus_score" => 0,
     "teamcymru_score" => 56,
     "alienvault_score" => 0,
+    "Total match" => 2,
 }
 ```
 ```
@@ -60,12 +64,14 @@ graph TD;
     "alienvault_score" => 0,
     "virustotal_score" => 0,
     "teamcymru_score" => 0,
-    "spamhaus_score" => "0",
+    "spamhaus_score" => 0,
+    "Total match" => 0,
 }
 ```
 ```
 2606:4700:3036::6815:38ea - rutracker.org IPv6
 {
+    "Total match" => 0,
     "abuseipdb_score" => 0,
     "alienvault_score" => 0,
                  "ip" => "2606:4700:3036::6815:38ea"
@@ -74,9 +80,10 @@ graph TD;
 ```
 91.238.229.134 - IP from AS58042 (СПбГУТ)
 {
+    "Total match" => 1,
     "alienvault_score" => 0,
     "abuseipdb_score" => 100,
-    "spamhaus_score" => "0",
+    "spamhaus_score" => 0,
     "virustotal_score" => 0,
     "teamcymru_score" => 1,
                  "ip" => "91.238.229.134"
@@ -87,9 +94,10 @@ graph TD;
 {
     "virustotal_score" => -6,
                   "ip" => "203.248.175.71",
-      "spamhaus_score" => "0",
+      "spamhaus_score" => 0,
      "abuseipdb_score" => 100,
-     "teamcymru_score" => "100",
-    "alienvault_score" => 1
+     "teamcymru_score" => 100,
+    "alienvault_score" => 1,
+    "Total match" => 4,
 }
 ```
