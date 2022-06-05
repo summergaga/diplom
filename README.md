@@ -13,14 +13,19 @@
 graph TD;
     A[stdin input] -->|Filter part| B[Grok IP parser];
     B --> C{Public IP filter};
-    C --> |Not public IP| J[Output];
-    C --> |Public IP| D[Spamhaus check];
-    D --> E[Alienvault];
-    E --> F[Virustotal check];
-    F --> G[AbuseIPDB check];
-    G --> H[TeamCymru check];
-    H --> I[Total result];
-    I --> J;
+    C --> |Not public IP| K[Output];
+    C --> |Public IP| D{IP Version};
+    D --> |IPv4| E[Spamhaus check];
+    E --> F[Alienvault check];
+    F --> G[Virustotal check];
+    G --> H[AbuseIPDB check];
+    H --> I[TeamCymru check];
+    I --> J[Total result V4];
+    J --> K;
+    D --> |IPv6| L[Alienvault check];
+    L --> M[AbuseIPDB check];
+    M --> N[Total result V6];
+    N --> K;
 ```
 
 # Механизм работы
