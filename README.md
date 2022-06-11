@@ -1,6 +1,9 @@
 # Описание
 
 Это мой дипломный проект по проверке IP-адресов в различных TI-фидах на базе Logstash  
+
+# Запуск
+
 Для запуска требуется установить `logstash-filter-public_ip` командой
 
     .\logstash-plugin install logstash-filter-public_ip
@@ -31,9 +34,9 @@ graph TD;
 # Механизм работы
 ## Проверка версии и типа IP-адреса
 Используется плагин `logstash-filter-public_ip`
-## Spamhaus
+## Проверка Spamhaus
 Если DNS-запрос вернул 127.0.0.4 - адрес присутствует в спам-листах Spamhaus. [Коды](https://www.spamhaus.org/zen/) и их [описание](https://www.spamhaus.org/faq/section/DNSBL%20Usage#200).
-## Рейтинг Alienvault
+## Проверка Alienvault
 Если возвращает 0, то IP чист, если 1 - то вредоносный.
 Работает через [API](https://otx.alienvault.com/api).
 [Ссылка на списки вредоносных IP](https://gist.github.com/bsmartt13/efa02c40ea12c09d9c3a).
@@ -47,7 +50,7 @@ graph TD;
 Рейтинг от 0 до 100, аналогично AbuseIPDB.
 
 ## Вывод общего результата
-Простое сравнение каждого параметра с порогом.
+Простое сравнение каждого полученного рейтинга с порогами, задаваемыми индивидуально для каждой из баз.
 # Примеры вывода
 ```
 1.1.1.1 - Cloudflare DNS one.one.one.one
